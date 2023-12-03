@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         screenRect = UIScreen.main.bounds
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = CGRect(x: 0, y: 0, width: screenRect.size.width, height: 0.9*screenRect.size.height)
+        previewLayer.frame = CGRect(x: 0, y: 0, width: screenRect.size.width, height: screenRect.size.height)
         previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
         previewLayer.connection?.videoOrientation = .portrait
