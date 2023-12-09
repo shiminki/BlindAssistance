@@ -15,6 +15,7 @@
 		8B552DFA2B00063000EC5D64 /* Obj_DetectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B552DF92B00063000EC5D64 /* Obj_DetectionUITests.swift */; };
 		8B552DFC2B00063000EC5D64 /* Obj_DetectionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B552DFB2B00063000EC5D64 /* Obj_DetectionUITestsLaunchTests.swift */; };
 		8B552E412B001B0D00EC5D64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B552E402B001B0D00EC5D64 /* ViewController.swift */; };
+		8B552E432B1F7A9A00EC5D64 /* SpeechController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B552E422B1F7A9A00EC5D64 /* SpeechController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		8B552DF92B00063000EC5D64 /* Obj_DetectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obj_DetectionUITests.swift; sourceTree = "<group>"; };
 		8B552DFB2B00063000EC5D64 /* Obj_DetectionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obj_DetectionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8B552E402B001B0D00EC5D64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B552E422B1F7A9A00EC5D64 /* SpeechController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				8B552DDE2B00062D00EC5D64 /* Obj_DetectionApp.swift */,
 				8B552DE02B00062D00EC5D64 /* ContentView.swift */,
 				8B552E402B001B0D00EC5D64 /* ViewController.swift */,
+				8B552E422B1F7A9A00EC5D64 /* SpeechController.swift */,
 				8B552DE22B00062F00EC5D64 /* Assets.xcassets */,
 				8B552DE42B00062F00EC5D64 /* Preview Content */,
 			);
@@ -262,6 +265,7 @@
 			files = (
 				8B552E412B001B0D00EC5D64 /* ViewController.swift in Sources */,
 				8B552DE12B00062D00EC5D64 /* ContentView.swift in Sources */,
+				8B552E432B1F7A9A00EC5D64 /* SpeechController.swift in Sources */,
 				8B552DDF2B00062D00EC5D64 /* Obj_DetectionApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

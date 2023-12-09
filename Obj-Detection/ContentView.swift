@@ -9,48 +9,32 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isTapped: Bool = false
+    let textToSpeechManager = SpeechController()
     
     var body: some View {
-        NavigationView {
             ZStack {
                 // live video feed
                 HostedViewController()
                     .ignoresSafeArea()
                 
-                // screen text toggles
-                if !isTapped {
-                    Color.black.opacity(0.1) // Black overlay with 0.9 opacity
-                                    .edgesIgnoringSafeArea(.all)
-                    Text("Tap the Screen to N.O.D")
-                        .font(.custom(
-                            "Copperplate",
-                            fixedSize: 36)
-                            .weight(.bold)
-                        )
-                        .multilineTextAlignment(.center)
+                // Button Overlay
+                Button(action: {
+                    if isTapped{
+                        textToSpeechManager.speak(text: "How can we help you...")
+                    } else {
+                        textToSpeechManager.speak(text: "Tap to nod")
+                    }
+                    isTapped.toggle()
+                }) {
+                    Text(isTapped ? "Tap to N.O.D" : "How can we help you...")
+                        .foregroundColor(.white)
+                                        .padding()
+                                        .background(Color.blue)
+                                        .cornerRadius(10)
+                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                 }
                 
-                if isTapped {
-                    Color.black.opacity(0.8) // Black overlay with 0.9 opacity
-                                    .edgesIgnoringSafeArea(.all)
-                    
-                    Text("Start Talking...")
-                        .font(.custom(
-                            "Copperplate",
-                            fixedSize: 36)
-                            .weight(.bold)
-                        )
-                        .multilineTextAlignment(.center)
-                    
-                }
-                
-            }.onTapGesture{
-                    // text
-                    self.isTapped.toggle()
-                }
-    
-        }
-        
+            }
     }
 }
 
