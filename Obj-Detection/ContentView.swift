@@ -8,36 +8,55 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var isTapped: Bool = false
+    // State variables for application
+    @State private var isSpeechRecognitionActive = false;
+    
+    // Class instances
     let textToSpeechManager = SpeechController()
     
+    // Important Variables
+    @State private var spokenText = ""
+    
     var body: some View {
-            ZStack {
-                // live video feed
-                HostedViewController()
-                    .ignoresSafeArea()
-                
-                // Button Overlay
-                Button(action: {
-                    if isTapped{
-                        textToSpeechManager.speak(text: "How can we help you...")
-                    } else {
-                        textToSpeechManager.speak(text: "Tap to nod")
+        VStack(alignment:.center) {
+                if isSpeechRecognitionActive{
+                    // Display for speec recognition
+                    Text("How can I help you today...")
+                        .padding()
+                        // for speech recognition startup
+                        .onAppear{
+                            spokenText = "How can I help you today"
+                            textToSpeechManager.speak(text: spokenText)
+                            
+                            // add logic for starting speech recognition
+                            
+                        }
+                } else {
+                    ZStack{
+                        // live video feed
+                        HostedViewController()
+                            .ignoresSafeArea()
+                        
+                        // Text for Display
+                        Text("Tap to N.O.D")
+                            .padding()
+                            // for text-to-speed
+                            .onAppear(){
+                                spokenText = "Tap to nod"
+                                textToSpeechManager.speak(text: spokenText)
+                            }
+                            .onTapGesture {
+                                self.isSpeechRecognitionActive = true
+                            }
                     }
-                    isTapped.toggle()
-                }) {
-                    Text(isTapped ? "Tap to N.O.D" : "How can we help you...")
-                        .foregroundColor(.white)
-                                        .padding()
-                                        .background(Color.blue)
-                                        .cornerRadius(10)
-                                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    
                 }
                 
             }
     }
 }
 
+// for previewing content
 #Preview {
     ContentView()
 }

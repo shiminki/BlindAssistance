@@ -5,6 +5,12 @@
 //  Created by Adonis Serrano on 12/5/23.
 //
 
+/*
+ To use: in content view, instantiate class:
+    let textToSpeechManager = SpeechController()
+ Use class functions to text to speech, will input ways to change audio and other values later.
+ */
+
 import Foundation
 import AVFAudio
 
