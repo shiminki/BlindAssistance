@@ -434,6 +434,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App uses camera for object detection";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "\"N.O.D\" uses speech recognition for taking user requests.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -465,6 +467,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "App uses camera for object detection";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app uses the microphone.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "\"N.O.D\" uses speech recognition for taking user requests.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

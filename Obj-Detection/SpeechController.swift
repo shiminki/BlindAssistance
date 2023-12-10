@@ -13,11 +13,17 @@
 
 import Foundation
 import AVFAudio
+import Speech
+import SwiftUI
 
 class SpeechController: NSObject, AVSpeechSynthesizerDelegate{
     // Create a speech synthesizer
     let SpeechSynthesizer = AVSpeechSynthesizer()
+    var isSpeechRecognitionActive = false
+    var inputText = ""
+    var outputText = ""
     
+    // function to speak text
     func speak(text: String){
         // Create an utterance
         let utterance = AVSpeechUtterance(string: text)
@@ -25,7 +31,7 @@ class SpeechController: NSObject, AVSpeechSynthesizerDelegate{
         // Utterance Configuration
         utterance.rate = 0.5
         utterance.pitchMultiplier = 0.8
-        utterance.postUtteranceDelay = 0.2
+        utterance.postUtteranceDelay = 0.5
         utterance.volume = 0.8
         
         // Tell the synthesizer to speak the utterance
@@ -33,6 +39,7 @@ class SpeechController: NSObject, AVSpeechSynthesizerDelegate{
         SpeechSynthesizer.speak(utterance)
     }
     
+    // function to stop speaking text
     func stopSpeaking() {
         SpeechSynthesizer.stopSpeaking(at: .immediate)
     }
